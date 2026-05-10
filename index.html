@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Love Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: pink;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      text-align: center;
+      z-index: 2;
+    }
+
+    h1 {
+      color: white;
+      font-size: 45px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: white;
+      color: hotpink;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: hotpink;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    #quote {
+      margin-top: 25px;
+      color: white;
+      font-size: 24px;
+      display: none;
+      max-width: 500px;
+    }
+
+    /* Настоящая сирень */
+    .flower {
+      position: absolute;
+      right: 60px;
+      bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: sway 3s ease-in-out infinite;
+    }
+
+    .flower img {
+      width: 180px;
+      margin-bottom: -20px;
+    }
+
+    .vase {
+      width: 90px;
+      height: 120px;
+      background: #b565d9;
+      border-radius: 0 0 40px 40px;
+      position: relative;
+    }
+
+    .vase::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 10px;
+      width: 70px;
+      height: 18px;
+      background: #d9a3ff;
+      border-radius: 10px;
+    }
+
+    @keyframes sway {
+      0% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg); }
+      100% { transform: rotate(-2deg); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>I love you Madina ❤️</h1>
+
+    <button onclick="showQuote()">
+      Нажми сюда
+    </button>
+
+    <div id="quote">
+      "Любовь — это когда один человек становится для тебя целым миром."
+    </div>
+  </div>
+
+  <!-- Настоящая сирень -->
+  <div class="flower">
+    <img 
+      src="https://www.pngall.com/wp-content/uploads/5/Lilac-PNG-Image.png"
+      alt="Lilac"
+    >
+
+    <div class="vase"></div>
+  </div>
+
+  <script>
+    function showQuote() {
+      document.getElementById("quote").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
